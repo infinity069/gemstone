@@ -7,16 +7,13 @@ fetch('rooms.json')
 })
 
 function showsDetails() {
-    let detail = document.querySelector(".details")
+    let detail = document.querySelector(".detailing")
     let productId = new URLSearchParams(window.location.search).get("id")
     let thisRoom = room.filter(value => {
         return value.id == productId
     })[0]
 
-    detail.querySelector('.detail-img img').src = thisRoom.image
-    function showrand() {
-       for( let i = 0; i < 4; i++) {
-        const randimgs = Math.floor(Math.random()* room.length)
-       }
-    }
+
+    detail.querySelector('.detailing-img img').src = thisRoom.image
+   
 }

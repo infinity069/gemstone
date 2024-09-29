@@ -5,28 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="fonts-6/css/all.min.css" />
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="construction.css" />
     <link rel="stylesheet" href="detail.css" />
     <title>Document</title>
+    <style></style>
   </head>
   <body>
-    <h2 class="mt-5 mb-3 text-center">Product Details</h2>
-    <div class="container">
-      <div class="details">
-        <div class="detail-img">
-          <img src="imgs/comfty-room.jpg" alt="" />
+    <header>
+      <div class="first-nav text-bg-dark">
+        <p>shittujamiy@gmail.com</p>
+      </div>
+      <div class="second-nav">
+        <img src="imgs/gemstone.jpg" class="brand" alt="" />
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
+        <nav>
+          <li><a href="accomodation.html">Accommodation</a></li>
+          <li><a href="kitchen.html">Kitchen</a></li>
+          <li><a href="bar.html">Bar</a></li>
+          <li class="dd-parent">
+            <a href="conference.html">Conference</a>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </nav>
+      </div>
+      <div class="side-menu">
+        <div class="brand-name">
+          <i class="fa fa-times"></i>
+          <h2>Gemstone</h2>
         </div>
-        <div class="detail-txt">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, itaque
-            dolor, at nulla quae cupiditate nihil excepturi distinctio voluptas
-            aut dolorum quis? Animi, id quae, officiis eligendi, fugiat soluta
-            repellendus ducimus aperiam consequuntur quis minima ipsum sed
-            quidem tempore labore!
-          </p>
-          <button class="btn text-bg-info">Book Room</button>
+        <div class="menus">
+          <li><a href="accomodation.html">accommodation</a></li>
+          <li><a href="kitchen.html">Restaurant</a></li>
+          <li><a href="bar.html">Bar</a></li>
+          <li><a href="conference.html">Conference</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </div>
       </div>
+    </header>
+    <h2 class="mt-5 mb-3 text-center">Product Details</h2>
+
+    <div class="detailing">
+      <div class="detailing-img">
+        <img src="" class="img-fluid" alt="" />
+      </div>
+      <div class="detailing-txt">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A, itaque
+          dolor, at nulla quae cupiditate nihil excepturi distinctio voluptas
+          aut dolorum quis? Animi, id quae, officiis eligendi, fugiat soluta
+          repellendus ducimus aperiam consequuntur quis minima ipsum sed quidem
+          tempore labore!
+        </p>
+        <button class="btn text-bg-info">Book Room</button>
+      </div>
     </div>
+
+    <footer>
+      <div class="footer-item row1">
+        <h4>Contact us</h4>
+        <p>Ataena community, Offa Nigeria</p>
+        <p>Phone: +2347056148621</p>
+        <p>Mail: shittujamiy@gmail.com</p>
+      </div>
+      <div class="footer-item row2">
+        <h4>Follow Us</h4>
+        <div class="f-socials">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+      <div class="footer-item row3">
+        <h4>Book Now</h4>
+        <div class="booking">
+          <li><a href="#">book room</a></li>
+          <li><a href="#">check availability</a></li>
+        </div>
+      </div>
+      <form action="#" class="subscribe">
+        <input type="email" name="#" id="#" placeholder="Subscribe..." />
+        <i class="fa-solid fa-paper-plane"></i>
+      </form>
+      <div id="copy">
+        <hr />
+        &copy; 2024 gemstone hotel & inn powered by jamiy
+      </div>
+    </footer>
+    <script src="construction.js"></script>
+    <script src="swipers/swiper-bundle.min.js"></script>
+    <script src="slide.js"></script>
     <script src="detail.js"></script>
   </body>
 </html>
