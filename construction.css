@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header .first-nav {
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+    z-index: 100;
+}
+.side-menu {
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    z-index: 100;
+    display: grid;
+    grid-template-rows: 100px 1fr 70px;
+    width: 400px;
+    height: 100%;
+    background: #0b2d3c;
+    color: #fff;
+    transition: all ease-in-out .3s;
+}
+.side-menu.active {
+    right: 0;
+}
+.brand-name {
+    text-align: center;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.side-menu li {
+    list-style: none;
+    width: 100%;
+}
+.socials {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+.fa-times {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 2em;
+    transform: translateY(-50%);
+}
+.socials i {
+    color: #fff;
+    font-size: 1.4em;
+}
+.menus {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1, 1fr;
+}
+.menus li {
+    width: 100%;
+}
+.menus a {
+    width: 100%;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.9em;
+    text-align: center;
+}
+.menus a:hover {
+    background-color: #fff;
+    color: #000;
+    border-left: 4px solid #ff31cc;
+}
+.first-nav p {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+.second-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #0b2d3c;
+    z-index: 99;
+    inset: 0 0 auto 0;
+}
+.brand {
+    border-radius: 50%;
+    width: 80px;
+}
+.hamburger {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    background: none;
+    border: none;
+    display: none;
+}
+.second-nav nav {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+.second-nav nav li {
+    list-style: none;
+}
+.second-nav a {
+    text-decoration: none;
+    color: white;
+}
+.socials {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+}
+
+/* the banner slide aspect */
+.hamburger .bar, .hamburger:before, .hamburger:after {
+    width: 100%;
+    height: 2px;
+    display: block;
+    content: '';
+    margin: 6px 0;
+    display: flex;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+.hamburger.isActive:before {
+    transform: translate(1px, 10px) rotate(-45deg);
+}
+.hamburger.isActive:after {
+    transform: translate(1px, -6px) rotate(45deg);
+}
+.hamburger.isActive .bar {
+    opacity: 0;
+}
+.content {
+    position: absolute;
+    width: 45%;
+    height: 100vh;
+    color: black;
+    background: transparent;
+    
+}
+
+.content-child {
+    position: relative;
+    height: 100%;
+    animation: slideLeft 0.6s ease-in forwards;
+}
+@keyframes slideLeft  {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+.overlay {
+    background: #202020b9;
+}
+.overlay, .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+}
+.details {
+    color: white;
+}
+
+.demo-banner {
+    height: 75vh;
+    overflow: hidden;
+}
+.banner-card {
+    position: relative;
+}
+.greetings {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    text-align: center;
+    color: white;
+    background-color: chocolate;
+    background: rgba(210, 105, 30, .6);
+    padding: 20px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+.greetings a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.heading1 {
+    font-size: 1.6em;
+    text-transform: capitalize;
+    margin-top: 30px;
+    text-align: center;
+}
+.brand-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.brand-logo img {
+    width: 220px;
+    box-shadow: 1px 2px 6px rgba(0 , 0, 0, .6);
+    border-radius: 50%;
+}
+.welcome-section {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+@media screen and (max-width: 1000px) {
+    .welcome-section {
+        grid-template-columns: none;
+    }
+    .welcome-img {
+        display: block;
+        margin: auto;
+    }
+}
+.welcome-img {
+    max-width: 500px;
+    overflow: hidden;
+}
+.welcome-img img {
+    width: 100%;
+}
+.rooms-sect {
+    margin-top: 60px;
+}
+.rooms-sect h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.room  img{
+    width: 300px;
+    overflow: hidden;
+}
+.room {
+    width: 300px;
+    gap: 30px;
+}
+.room-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px ;
+    background: rgb(11, 45, 60);
+}
+.g-item1 {
+    grid-area: gym;
+    overflow: hidden;
+}
+.g-item2 {
+    grid-area: kit;
+    overflow: hidden;
+}
+.g-item3 {
+    grid-area: carp;
+    overflow: hidden;
+}
+.g-item4 {
+    grid-area: pool;
+    overflow: hidden;
+}
+.g-item5 {
+    grid-area: bar;
+    overflow: hidden;
+}
+.g-item6 {
+    grid-area: fount;
+    overflow: hidden;
+}
+.gallery {
+    display: grid;
+    grid-template-areas:
+     'gym gym kit'
+     'gym gym carp'
+     'pool bar fount'
+    ;
+    gap: 3px;
+}
+.gallaries {
+    margin-top: 60px;
+}
+.gallaries h3 {
+    margin: 20px;
+    text-align: center;
+}
+#h3 {
+    font-size: 1.4em;
+}.gallery img {
+    width: 100%;
+}
+.recent-container {
+    display: flex;
+    gap: 20px;
+}
+.recents {
+    width: 300px;
+    object-fit: cover;
+}
+.recent-img  {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.recent-img img {
+    width: 100%;
+    height: 100%;
+}
+.recents p {
+    text-transform: capitalize;
+}
+.kitchen-cont {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url('imgs/burger.jpg');
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.kitchen-cont img {
+    width: 100%;
+}
+.kitchen-cont a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 15px 40px;
+    color: #fff;
+    background: #000;
+    text-decoration: none;
+    border: 3px solid #ffffff;
+    transition: all ease-in 0.3s;
+}
+.kitchen-cont a:hover {
+    background-color: transparent;
+}
+.showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.showcase {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+}
+.showcase-img {
+    width: 100%;
+    height: 500px;
+}
+.showcase-img img {
+    width: 100%;
+    height: 100%;
+}
+.showcase-box img {
+    width: 100%;
+    object-fit: cover;
+}
+.image-pick {
+    width: 90%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.small-container {
+    overflow: hidden;
+    width: 100%;
+    height: inherit;
+    background: #000;
+}
+.small-showcase-box {
+    overflow: hidden;
+    background: #000;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+.small-showcase-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 1110px) {
+    .showcase-container {
+        grid-template-columns: 1fr;
+    }
+ 
+}
+
+@media screen and (max-width: 768px) {
+    .image-pick {
+        width: 100%;
+    }
+    .hamburger {
+        display: block;
+    }
+    .second-nav nav {
+        display: none;
+    }
+}
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    justify-content: center;
+}
+.accomondation-link {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.accomondation-link a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+.product {
+    width: 300px;
+}
+.product-img img {
+    width: 100%;
+}
+.row1 {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.row2 {
+    grid-area: follow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.row2 h4, .row3 h4 {
+    margin-bottom: 20px;
+}
+.f-socials i {
+    font-size: 1.8em;
+}
+.f-socials {
+    display: flex;
+    gap: 10px;
+}
+.row3 {
+    grid-area: book;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.booking {
+    text-align: center;
+    display: grid;
+    gap: 10px;
+}
+.booking li {
+    list-style: none;
+}
+
+.booking a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+.subscribe {
+    grid-area: mail;
+    justify-self: center;
+    max-width: 450px;
+    min-width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.subscribe input {
+    width: 100%;
+    height: 100%;
+    padding: 0 5px;
+}
+.subscribe i {
+    font-size: 1.2em;
+}
+#copy {
+    grid-area: copy;
+    text-align: center;
+}
+footer {
+    display: grid;
+    grid-template-areas: 
+    'contact follow book'
+    'mail mail mail'
+    'copy copy copy';
+    background: #0b2d3c;
+    color: white;
+    padding: 40px 20px ;
+}
+@media screen and (max-width: 900px) {
+    footer {
+        grid-template-areas: 
+        'contact'
+        'follow'
+        'book'
+        'mail'
+        'copy'
+        ;
+        gap: 80px;
+        justify-content: center;
+    }
+    footer hr {
+        width: 90%;
+    }
+}
+.room-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+.item-details {
+    box-shadow: 1px 2px 6px rgba(0 , 0, 0, .6);
+    border-radius: 20px;
+    margin-top: 5px;
+}
+.item-details p {
+    padding: 10px;
+}
+.item-details h4 {
+    background: #008b3f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px 0;
+}
+.item-details button {
+    margin: auto;
+    display: block;
+    padding: 8px 14px;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+    text-transform: capitalize;
+    background-image: linear-gradient(#008b3f, black);
+}
+.bar-cont {
+    border-radius: 30px;
+    overflow: hidden !important;
+}
+@media screen and (min-width: 1098px) {
+    .room-item {
+        position: relative;
+    }
+    /* accomodations */
+    .item-details {
+        position: absolute;
+        width: 400px;
+        top: 50%;
+        background: white;
+        transform: translateY(-50%);
+        box-shadow: 1px 2px 6px rgba(0 , 0, 0, .6);
+        border-radius: 20px;
+    }
+    .item-details h4 {
+        background: #008b3f;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    .item-details p {
+        padding: 10px;
+    }
+    .item-details button {
+        margin: auto;
+        display: block;
+        padding: 8px 14px;
+        margin-bottom: 10px;
+        border: none;
+        color: white;
+        text-transform: capitalize;
+        background-image: linear-gradient(#008b3f, black);
+    }
+    .all-rooms {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    .right {
+        align-self: flex-end;
+    }
+    .right-item {
+        right: 300px;
+        background: white;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+    .left-item {
+        right: -300px;
+    
+    }
+    
+}
+.short-img {
+    max-height: 65vh;
+    object-fit: contain;
+    overflow: hidden;
+}
+.kitchen-item img {
+    width: 100%;
+    height: Auto;
+}
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+@media screen and (max-width: 767px) {
+    .food-container {
+        justify-content: center;
+    }
+}
+.wine-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: space-between;
+    gap: 30px;
+}
+@media screen and (max-width: 1200px) {
+    .wine-cont {
+        grid-template-columns: repeat(2, 300px);
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width: 770px) {
+    .wine-cont {
+        grid-template-columns: none;
+        grid-template-rows:  1;
+        justify-content: space-around;
+    }
+}
+.food-card, .drink-card {
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-details {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.card-icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+.card-icons span {
+    padding: 2px 8px;
+    background: rgba(0, 0, 0, 0.575);
+    text-align: center;
+    border-radius: 10px;
+}
+.food-card img, .drink-card img {
+    width: 100%;
+}
+
+.bdr {
+    border-radius: 30px;
+    overflow: hidden;
+}
+.icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    transition: all .3s;
+}
+.icon i {
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.575);
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+.food-card:hover .icon, .drink-card:hover .icon {
+    display: flex;
+    transition: all ease .3s;
+}
+.details-txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background: #272525;
+    color: #fff;
+}
+/* kitchen */
+.describe-section {
+    margin: 120px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.describe-section textarea {
+    min-height: 200px;
+    padding: 10px;
+}

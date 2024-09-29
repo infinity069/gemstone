@@ -1,0 +1,19 @@
+.conference-room {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.h2 {
+    margin-top: 90px;
+}
+.conf-txt {
+    padding: 20px;
+}
+.conf-img {
+    padding: 20px;
+}
+@media screen and (max-width: 767px) {
+    .conference-room {
+        grid-template-columns: none;
+    }
+}

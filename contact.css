@@ -1,0 +1,60 @@
+.contact-cta {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 40px;
+}
+.contacctcts p {
+    font-weight: bold;
+}
+input {
+    padding: 0 10px;
+}
+.email input, .textarea textarea, .number input{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+}
+.names {
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
+}
+.name-field {
+    width: 50%;
+    height: 40px;
+}
+.name-field input {
+    width: 100%;
+    height: 100%;
+}
+.input-field {
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 780px) {
+    .contact-cta {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .names {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .name-field {
+        width: 100%;
+        height: 40px;
+    }
+    .name-field input {
+        width: 100%;
+        height: 100%;
+    }
+}
+.parallax-1 {
+    background-image: url(imgs/hotel1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}

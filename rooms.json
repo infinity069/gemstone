@@ -1,0 +1,27 @@
+[
+    {
+        "image": "imgs/room.jpg",
+        "title": "Bedroom",
+        "id": 1
+    },
+    {
+        "image": "imgs/luxury-room.jpg",
+        "title": "Luxury room",
+        "id": 2
+    },
+    {
+        "image": "imgs/green room.jpg",
+        "title": "Green room",
+        "id": 3
+    },
+    {
+        "image": "imgs/comfty-room.jpg",
+        "title": "Comfty room",
+        "id": 4
+    },
+    {
+        "image": "imgs/conference-room.jpg",
+        "title": "Conference room",
+        "id": 5
+    }
+]
