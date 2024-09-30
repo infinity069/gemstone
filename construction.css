@@ -646,6 +646,10 @@ footer {
     .food-container {
         justify-content: center;
     }
+    .side-menu {
+        width: 100%;
+        right: -100%;
+    }
 }
 .wine-cont {
     display: grid;
